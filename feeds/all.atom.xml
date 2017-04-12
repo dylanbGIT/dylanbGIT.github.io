@@ -990,7 +990,16 @@ h6:hover .anchor-link {
 &lt;h3 id="&amp;quot;I-want-to-live-near-the-train&amp;quot;"&gt;"I want to live near the train"&lt;a class="anchor-link" href="#&amp;quot;I-want-to-live-near-the-train&amp;quot;"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Some of the most powerful predictors of housing costs in NYC is proximity to trains and proximity to Manhattan. The exclusion of people with disabilities from the labor force pushes them towards lower cost neighborhoods where there is often lower density of train stations. However, one might expect that despite the lower density of stations, that less restrictive station designs and more open space might allow for a high portion of such stations to be accessible.&lt;/p&gt;
 &lt;p&gt;Below are two maps showing the locations of accessible (purple) and inaccessible (red) platforms overlaid on the distribution of people with ambulatory disabilities. The first map shades census tract regions by the  counts of individuals with ambulatory disabilities while the second map shades the regions by the percentage (i.e. population with ambulatory disability / total disability in the tract)&lt;/p&gt;
 &lt;iframe allowfullscreen="" frameborder="0" height="520" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://gmork.carto.com/builder/858844d9-3cfb-45ba-a473-420e3b66e74d/embed" webkitallowfullscreen="" width="100%"&gt;&lt;/iframe&gt;
-&lt;iframe allowfullscreen="" frameborder="0" height="520" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://gmork.carto.com/builder/8e4957b0-18fb-11e7-b7eb-0e233c30368f/embed" webkitallowfullscreen="" width="100%"&gt;&lt;/iframe&gt;&lt;h3 id="Graphing-the-subway"&gt;Graphing the subway&lt;a class="anchor-link" href="#Graphing-the-subway"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;iframe marginheight="0" marginwidth="0" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" scrolling="no" src="/dylanbGIT/raw/aed4b9474b9df3e700ed7a21402af287/a0bb1098f7ca4d624246563d92a2789d10445fc1/" style="height:500px;"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;iframe allowfullscreen="" frameborder="0" height="520" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://gmork.carto.com/builder/8e4957b0-18fb-11e7-b7eb-0e233c30368f/embed" webkitallowfullscreen="" width="100%"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Graphing-the-subway"&gt;Graphing the subway&lt;a class="anchor-link" href="#Graphing-the-subway"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;iframe frameborder="0" height="600" marginheight="0" marginwidth="0" scrolling="no" src="http://bl.ocks.org/dylanbGIT/raw/aed4b9474b9df3e700ed7a21402af287/a0bb1098f7ca4d624246563d92a2789d10445fc1/" style="height:500px;" width="100%"&gt;&lt;/iframe&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
