@@ -1,5 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>MindTheGap</title><link href="https://dylanbgit.github.io/" rel="alternate"></link><link href="https://dylanbgit.github.io/feeds/posts-analysis-strategy.atom.xml" rel="self"></link><id>https://dylanbgit.github.io/</id><updated>2017-04-05T14:36:00-04:00</updated><entry><title>Graphing the subway</title><link href="https://dylanbgit.github.io/network.html" rel="alternate"></link><published>2017-04-05T14:36:00-04:00</published><updated>2017-04-05T14:36:00-04:00</updated><author><name>Dylan Bargteil</name></author><id>tag:dylanbgit.github.io,2017-04-05:network.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>MindTheGap - analysis</title>
+        <link rel="stylesheet" href="https://dylanbgit.github.io/theme/css/main.css" />
+        <link href="https://dylanbgit.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="MindTheGap Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://dylanbgit.github.io/">MindTheGap </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="https://dylanbgit.github.io/category/analysis.html">analysis</a></li>
+                    <li><a href="https://dylanbgit.github.io/category/demographics.html">demographics</a></li>
+                    <li><a href="https://dylanbgit.github.io/category/perspective.html">perspective</a></li>
+                    <li><a href="https://dylanbgit.github.io/category/posts.html">posts</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://dylanbgit.github.io/network.html">Graphing the subway</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-04-05T14:36:00-04:00">
+                Published: Wed 05 April 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://dylanbgit.github.io/author/dylan-bargteil.html">Dylan Bargteil</a>
+        </address>
+<p>In <a href="https://dylanbgit.github.io/category/analysis.html">analysis</a>.</p>
+<p>tags: <a href="https://dylanbgit.github.io/tag/graph-network-centrality-degree-pagerank.html">graph network centrality degree pagerank</a> </p>
+</footer><!-- /.post-info --><style type="text/css">/*!
 *
 * IPython notebook
 *
@@ -230,7 +266,7 @@ div.unrecognized_cell .inner_cell a:hover {
   text-decoration: none;
 }
 @media (max-width: 540px) {
-  div.unrecognized_cell &gt; div.prompt {
+  div.unrecognized_cell > div.prompt {
     display: none;
   }
 }
@@ -283,19 +319,19 @@ div.input_prompt {
   color: #303F9F;
   border-top: 1px solid transparent;
 }
-div.input_area &gt; div.highlight {
+div.input_area > div.highlight {
   margin: 0.4em;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-div.input_area &gt; div.highlight &gt; pre {
+div.input_area > div.highlight > pre {
   margin: 0px;
   border: none;
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+/* The following gets added to the <head> if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -341,7 +377,7 @@ div.input_area &gt; div.highlight &gt; pre {
 }
 /*
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
 
 */
@@ -803,7 +839,7 @@ div.text_cell {
   align-items: stretch;
 }
 @media (max-width: 540px) {
-  div.text_cell &gt; div.prompt {
+  div.text_cell > div.prompt {
     display: none;
   }
 }
@@ -868,8 +904,8 @@ h6:hover .anchor-link {
   font-size: 100%;
   font-style: italic;
 }
-&lt;/style&gt;
-&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -933,8 +969,8 @@ h6:hover .anchor-link {
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
-&lt;style type="text/css"&gt;
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+<style type="text/css">
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -970,28 +1006,28 @@ h6:hover .anchor-link {
 .ansi-white-intense-bg { background-color: #A1A6B2; }
 
 .ansi-bold { font-weight: bold; }
-&lt;/style&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Graphing-the-subway"&gt;Graphing the subway&lt;a class="anchor-link" href="#Graphing-the-subway"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/aed4b9474b9df3e700ed7a21402af287/raw/d548415d4ef57208099bf91deabe7df063f1c6ed/index.html" webkitallowfullscreen="" width="100%"&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+</style>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Graphing-the-subway">Graphing the subway<a class="anchor-link" href="#Graphing-the-subway">¶</a></h1><p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/aed4b9474b9df3e700ed7a21402af287/raw/d548415d4ef57208099bf91deabe7df063f1c6ed/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
@@ -1018,5 +1054,37 @@ h6:hover .anchor-link {
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;
-</summary><category term="graph network centrality degree pagerank"></category></entry></feed>
+</script>
+                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://dylanbgit.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
