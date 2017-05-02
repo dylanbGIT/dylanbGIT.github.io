@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>MindTheGap - analysis</title>
+        <title>MindTheGap - Background & Perspective</title>
         <link rel="stylesheet" href="https://dylanbgit.github.io/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,16 +14,16 @@
         <header id="banner" class="body">
                 <h1><a href="https://dylanbgit.github.io/">MindTheGap </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="https://dylanbgit.github.io/category/analysis.html">analysis</a></li>
-                    <li><a href="https://dylanbgit.github.io/category/demographics.html">demographics</a></li>
-                    <li><a href="https://dylanbgit.github.io/category/perspective.html">perspective</a></li>
-                    <li><a href="https://dylanbgit.github.io/category/posts.html">posts</a></li>
+                    <li><a href="https://dylanbgit.github.io/category/about.html">About</a></li>
+                    <li class="active"><a href="https://dylanbgit.github.io/category/background-perspective.html">Background & Perspective</a></li>
+                    <li><a href="https://dylanbgit.github.io/category/demographics.html">Demographics</a></li>
+                    <li><a href="https://dylanbgit.github.io/category/strategy-analysis.html">Strategy & Analysis</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://dylanbgit.github.io/network.html">Graphing the subway</a></h1>
+                    <h1 class="entry-title"><a href="https://dylanbgit.github.io/background.html">The NYC subway is inaccessible</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-04-05T14:36:00-04:00">
                 Published: Wed 05 April 2017
@@ -32,8 +32,8 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="https://dylanbgit.github.io/author/dylan-bargteil.html">Dylan Bargteil</a>
         </address>
-<p>In <a href="https://dylanbgit.github.io/category/analysis.html">analysis</a>.</p>
-<p>tags: <a href="https://dylanbgit.github.io/tag/graph-network-centrality-degree-pagerank.html">graph network centrality degree pagerank</a> </p>
+<p>In <a href="https://dylanbgit.github.io/category/background-perspective.html">Background & Perspective</a>.</p>
+<p>tags: <a href="https://dylanbgit.github.io/tag/lawsuit-ada-compliance.html">lawsuit ADA compliance</a> </p>
 </footer><!-- /.post-info --><style type="text/css">/*!
 *
 * IPython notebook
@@ -1011,7 +1011,17 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Graphing-the-subway">Graphing the subway<a class="anchor-link" href="#Graphing-the-subway">¶</a></h1><p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/aed4b9474b9df3e700ed7a21402af287/raw/d548415d4ef57208099bf91deabe7df063f1c6ed/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
+<h1 id="Accessibility-is-a-problem-for-the-NYC-subway">Accessibility is a problem for the NYC subway<a class="anchor-link" href="#Accessibility-is-a-problem-for-the-NYC-subway">¶</a></h1><p>The New York City subway is the dominant mode of travel for residents commuting to and from work. However, according to data provided by the city, only 113 of 473 platforms are accessible by ADA-compliant elevators. While the bus fleet is 100% accessible and the MTA provides a paratransit service, these modes of transportation are not well-suited for interborough travel in a timely manner, particularly if the destination is a busy area. Given that an individual with a disability is significantly more likely to be unemployed and impoverished than one without a disability, subway accessibility is an important social justice issue.</p>
+<table class="image">
+<caption align="bottom">Credit: Matthew Ahn, Subway Record</caption>
+<tr><td><a href="https://subwayrecord.files.wordpress.com/2015/03/ada-subway-map-w-key.jpg"><img src="https://subwayrecord.files.wordpress.com/2015/03/ada-subway-map-w-key.jpg" width="600px" /></a></td></tr>
+</table><h3 id="The-MTA&#x27;s-current-plan-for-increasing-accessibility">The MTA's current plan for increasing accessibility<a class="anchor-link" href="#The-MTA&#x27;s-current-plan-for-increasing-accessibility">¶</a></h3><p>In 1994, the MTA identified 100 "Key Stations" to prioritize for ADA compliance by 2020. Approximately 3/4 of the stations identified are already accessible, leaving approximately 25 stations due for upgrade in the next few years. They selected the stations by considering their ridership, the availability of transfers to other subway lines or modes of transport, and location relative to centers of activity. Stations at the end of subway lines were also prioritized. Thus far I have had little success in finding documents detailing what stations they plan to upgrade or quantitative specifics about their methodology for selecting those stations. However, even simply considering the aforementioned qualitative criteria, there are notable absences such as whether a station is located in an area where disability is common or rare among residents or whether a station sees elevated traffic from individuals with disabilities. Consideration of how commuting patterns might differ between individuals with and without disabilities may be important for determining the most effective elevator placement.</p>
+<h3 id="Taking-a-more-data-driven-approach">Taking a more data-driven approach<a class="anchor-link" href="#Taking-a-more-data-driven-approach">¶</a></h3><p>The first question I wanted to ask is how well the current distribution of accessible stations reflects the distribution of New Yorkers with ambulatory disabilities. To answer this I obtained estimates of the number of individuals with ambulatory disabilities living in each census tract in New York City (excluding Staten Island) from the American Community Survey 2015 5-year estimates (Table S1810). I've also obtained turnstile and elevator status data from the MTA, as well as the location subway platforms. The MTA does not include accessibility information in any data set I have found, so I scraped <a href="https://en.wikipedia.org/wiki/List_of_accessible_New_York_City_Subway_stations">Wikipedia</a> for the accessible stations and train lines (i.e. platforms). I am using this data to quantify:</p>
+<ul>
+<li>How correlated is accessible station location with like trip origins/destinations?</li>
+<li>Where would adding elevators restore maximum connectivity in the subway graph? Where would it minimize the total distance between all pairs of nodes?</li>
+<li>How much could we reduce trip times by adding elevators, and where would they have the most impact?</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1057,14 +1067,6 @@ h6:hover .anchor-link {
                 </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
