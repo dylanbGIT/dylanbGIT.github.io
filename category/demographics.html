@@ -1024,20 +1024,23 @@ $$ n\frac{\sum_k N_kA_k}{A}$$<p>Meanwhile we can directly calculate the portion 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/91069e72aa2e0ea11437449e4bf2b2b8/raw/df5b499034740f2254d8165589ac8745b66c99ec/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
-<p>The current placement of accessible subways stations tracks where people with disabilities less than if we placed those stations randomly! Meanwhile the location of subway stations generally is somewhat biased towards where the general population lives.</p>
+<p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/22207caca6212c7e7f851a6bea7ff648/raw/cb2f3ea26bb95faf994e1711126e89ab0e838d40/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
+<p>It appears that maybe more New Yorkers with disabilities would be served by placing accessible subway stations randomly throughout the city than are served by the current system! Meanwhile the location of subway stations generally is somewhat biased towards where the general population lives.</p>
+<p>This disparity is notable, but what's causing it? We can consider two hypothetical scenarios to tease apart the effects of geography (i.e. the population of New Yorkers with disabilities is distributed differently than the population of all New Yorkers) and the accessibility of particular stations. First we can ask, if only accessible stations existed, what is the average number of New Yorkers who would live near a station? Second we can ask, if all subway stations were accessible, what is the average number of New Yorkers with disabilities who would live near a station?</p>
+<p>On average about 4615 New Yorkers live in a census block containing an accessible station. So if there were only accessible stations in the subway, we'd do about 10% better than random placement (up from 4%). This indicates that accessible stations are likely to be found where New Yorkers are, but where New Yorkers with disabilities <em>aren't</em>.</p>
+<p>On the other hand, if all stations were accessible, on average about 446 New Yorkers with disabilities (268 with ambulatory disabilities) would live in a census block containing an accessible station. This brings the numbers up to about 95% (from about 90% in the current subway system) of the amount living near accessible subway stations if they were placed randomly. This indicates that there are subway platforms in areas with high numbers of New Yorkers with disabilities, but that these platforms are not accessible. The effect size for both hypotheticals is ~5%, indicating that the likelihood that a subway platform is accessible is both insensitive to where New Yorkers with disabilities live and sensitive to other factors that are tracked by where New Yorkers generally live (e.g. areas of high activity and wealth).</p>
 <p>The code for calculating these statistics is presented below:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">census</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/census.csv'</span><span class="p">)</span>
-<span class="n">stations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/stations.csv'</span><span class="p">)</span>
+<span class="n">stations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">'files/stations.pkd'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1045,7 +1048,7 @@ $$ n\frac{\sum_k N_kA_k}{A}$$<p>Meanwhile we can directly calculate the portion 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculate expected values for total population, population with disabilities, & population with ambulatory disabilities</span>
@@ -1076,7 +1079,7 @@ Expected value for population with ambulatory disability: 278.8872916558287
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># calculate actual percentage of total population living near trains (normalized by n)</span>
@@ -1096,9 +1099,40 @@ Expected value for population with ambulatory disability: 278.8872916558287
 <div class="output">
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Actual value for total population: 4690.583509513742
-Actual value for population with disability: 422.2616822429907
-Actual value for population with ambulatory disability: 216.61682242990653
+<pre>Actual value for total population: 4423.296803652968
+Actual value for population with disability: 436.5
+Actual value for population with ambulatory disability: 256.70652173913044
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># if only accessible stations existed</span>
+<span class="n">onlyAccess</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">stations</span><span class="p">[</span><span class="n">stations</span><span class="p">[</span><span class="s1">'accessible'</span><span class="p">]][</span><span class="s1">'totalpop'</span><span class="p">]))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">stations</span><span class="p">[</span><span class="n">stations</span><span class="p">[</span><span class="s1">'accessible'</span><span class="p">]])</span>
+<span class="c1"># if all stations were accessible</span>
+<span class="n">allAccess</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">stations</span><span class="p">[</span><span class="s1">'totaldispop'</span><span class="p">]))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span>
+<span class="n">allAccessAmb</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">stations</span><span class="p">[</span><span class="s1">'ambdispop'</span><span class="p">]))</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'If only accessible stations existed, total population: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">onlyAccess</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'If all stations were accesible, disability: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">allAccess</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'If all stations were accessible, ambulatory disability: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">allAccessAmb</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>If only accessible stations existed, total population: 4624.445652173913
+If all stations were accesible, disability: 446.42237442922374
+If all stations were accessible, ambulatory disability: 267.9748858447489
 </pre>
 </div>
 </div>
