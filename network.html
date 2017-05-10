@@ -1018,6 +1018,93 @@ h6:hover .anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Graphing-the-subway">Graphing the subway<a class="anchor-link" href="#Graphing-the-subway">¶</a></h1><p>Below is a network model of the NYC subway system. Each node corresponds with a platform. Inaccessible platforms are colored red while accessible ones are colored green. The size of the node reflects its degree (# of nearest neighbors). I am using this graph to guide strategies for identifying which platforms are most in need of upgrades base on connectivity to other platforms and centrality to the system as a whole.</p>
 <p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/0968f3f2dc7ad713f1068e948e64a15b/raw/d163e597f43b33e43bac826c8bf637c700de9340/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
+<p>As of today (May 10th, 2017), the MTA is planning ADA upgrades for 13 stations to be completed by 2020. We can calculate the degree and Katz centrality of each station using the graph above, and compare the MTA's priorities to the 13 inaccessible stations with highest degree or highest Katz centrality. I've colored the stations in the MTA plan blue to highlight overlaps with the other lists. Stations that are <em>unique</em> to either the largest degree or largest Katz centrality lists are colored purple.</p>
+<table>
+<thead><tr>
+<th style="text-align:center">MTA Plan</th>
+<th style="text-align:center">Largest degree</th>
+<th style="text-align:center">Largest Katz centrality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Times Square – 42 Street (S)</font></td>
+<td style="text-align:center">7 Avenue (B,E,D)</td>
+<td style="text-align:center"><font color="#1f77b4">Times Square – 42 Street (S)</font></td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">57 Street (Q,R,W,N)</font></td>
+<td style="text-align:center">14 Street (1,2,3)</td>
+<td style="text-align:center">Canal Street (Q,N)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">59 Street (R,N)</font></td>
+<td style="text-align:center">Jackson Heights - Roosevelt Avenue (E,R,M,F)</td>
+<td style="text-align:center">7 Avenue (B,E,D)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Chambers Street (J,Z)</font></td>
+<td style="text-align:center">Canal Street (Q,N)</td>
+<td style="text-align:center">14 Street (1,2,3)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">E 180 Street (2,5)</font></td>
+<td style="text-align:center">145 Street (A,B,C,D)</td>
+<td style="text-align:center"><font color="#1f77b4">57 Street (Q,R,W,N)</font></td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Eastern Parkway – Brooklyn Museum (2,3,4)</font></td>
+<td style="text-align:center"><font color="#9467bd">Myrtle Avenue (J,M,Z)</font></td>
+<td style="text-align:center">145 Street (A,B,C,D)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">68 Street – Hunter College (4,6)</font></td>
+<td style="text-align:center"><font color="#9467bd">Tremont Avenue (B,D)</font></td>
+<td style="text-align:center">Jackson Heights – Roosevelt Avenue (E,R,M,F)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Bedford Avenue (L)</font></td>
+<td style="text-align:center">14 Street (M,F)</td>
+<td style="text-align:center">Lexington Avenue – 59 Street (R,N,W)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Greenpoint Avenue (G)</font></td>
+<td style="text-align:center"><font color="#9467bd">Queensboro Plaza (7,W,N)</font></td>
+<td style="text-align:center">14 Street (M,F)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Bedford Park Boulevard (B,D)</font></td>
+<td style="text-align:center"><font color="#1f77b4">57 Street (Q,R,W,N)</font></td>
+<td style="text-align:center">Canal Street (J,Z)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Astoria Boulevard (W,N)</font></td>
+<td style="text-align:center">Lexington Avenue – 59 Street (R,N,W)</td>
+<td style="text-align:center"><font color="#9467bd">Court Street (R,N)</font></td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">86 Street (R)</font></td>
+<td style="text-align:center">Broadway Junction (J,Z)</td>
+<td style="text-align:center">Chambers Street (A,C)</td>
+</tr>
+<tr>
+<td style="text-align:center"><font color="#1f77b4">Ozone Park – Lefferts Boulevard (A,S)</font></td>
+<td style="text-align:center">Chambers Street (A,C)</td>
+<td style="text-align:center">Broadway Junction (J,Z)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Total degree: 35</strong></td>
+<td style="text-align:center"><strong>Total degree: 70</strong></td>
+<td style="text-align:center"><strong>Total degree: 70</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Total Katz: .605</strong></td>
+<td style="text-align:center"><strong>Total Katz: .803</strong></td>
+<td style="text-align:center"><strong>Total Katz: .821</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The stations that the MTA has prioritized are not very connected, as reflected in the low total degree and Katz scores, as well as the small overlap with the lists that maximize those measures.</p>
 </div>
 </div>
 </div>
