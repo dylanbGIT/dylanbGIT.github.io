@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>MindTheGap - degree</title>
-        <link rel="stylesheet" href="https://dylanbgit.github.io/theme/css/main.css" />
+        <link rel="stylesheet" href="https://dzbee.github.io/theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,28 +12,28 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://dylanbgit.github.io/">MindTheGap </a></h1>
+                <h1><a href="https://dzbee.github.io/">MindTheGap </a></h1>
                 <nav><ul>
-                    <li><a href="https://dylanbgit.github.io/category/about.html">About</a></li>
-                    <li><a href="https://dylanbgit.github.io/category/background-perspective.html">Background & Perspective</a></li>
-                    <li><a href="https://dylanbgit.github.io/category/demographics.html">Demographics</a></li>
-                    <li><a href="https://dylanbgit.github.io/category/strategy-analysis.html">Strategy & Analysis</a></li>
+                    <li><a href="https://dzbee.github.io/category/about.html">About</a></li>
+                    <li><a href="https://dzbee.github.io/category/background-perspective.html">Background & Perspective</a></li>
+                    <li><a href="https://dzbee.github.io/category/demographics.html">Demographics</a></li>
+                    <li><a href="https://dzbee.github.io/category/strategy-analysis.html">Strategy & Analysis</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://dylanbgit.github.io/network.html">Graphing the subway</a></h1>
+                    <h1 class="entry-title"><a href="https://dzbee.github.io/network.html">Graphing the subway</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-04-05T14:36:00-04:00">
                 Published: Wed 05 April 2017
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://dylanbgit.github.io/author/dylan-bargteil.html">Dylan Bargteil</a>
+                By                         <a class="url fn" href="https://dzbee.github.io/author/dylan-bargteil.html">Dylan Bargteil</a>
         </address>
-<p>In <a href="https://dylanbgit.github.io/category/strategy-analysis.html">Strategy & Analysis</a>.</p>
-<p>tags: <a href="https://dylanbgit.github.io/tag/graph.html">graph</a> <a href="https://dylanbgit.github.io/tag/network.html">network</a> <a href="https://dylanbgit.github.io/tag/centrality.html">centrality</a> <a href="https://dylanbgit.github.io/tag/degree.html">degree</a> <a href="https://dylanbgit.github.io/tag/pagerank.html">pagerank</a> </p>
+<p>In <a href="https://dzbee.github.io/category/strategy-analysis.html">Strategy & Analysis</a>.</p>
+<p>tags: <a href="https://dzbee.github.io/tag/graph.html">graph</a> <a href="https://dzbee.github.io/tag/network.html">network</a> <a href="https://dzbee.github.io/tag/centrality.html">centrality</a> <a href="https://dzbee.github.io/tag/degree.html">degree</a> <a href="https://dzbee.github.io/tag/pagerank.html">pagerank</a> </p>
 </footer><!-- /.post-info --><style type="text/css">/*!
 *
 * IPython notebook
@@ -1012,7 +1012,7 @@ h6:hover .anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Graphing-the-subway">Graphing the subway<a class="anchor-link" href="#Graphing-the-subway">¶</a></h1><p>Below is a network model of the NYC subway system. Each node corresponds with a platform. Inaccessible platforms are colored red while accessible ones are colored green. The size of the node reflects its degree (# of nearest neighbors). I am using this graph to guide strategies for identifying which platforms are most in need of upgrades base on connectivity to other platforms and centrality to the system as a whole.</p>
-<p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dylanbGIT/0968f3f2dc7ad713f1068e948e64a15b/raw/d163e597f43b33e43bac826c8bf637c700de9340/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
+<p><iframe allowfullscreen="" height="500" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://cdn.rawgit.com/dzbee/0968f3f2dc7ad713f1068e948e64a15b/raw/d163e597f43b33e43bac826c8bf637c700de9340/index.html" webkitallowfullscreen="" width="100%"></iframe></p>
 <p>As of today (May 10th, 2017), the MTA is planning ADA upgrades for 13 stations to be completed by 2020. We can calculate the degree and Katz centrality of each station using the graph above, and compare the MTA's priorities to the 13 inaccessible stations with highest degree or highest Katz centrality. I've colored the stations in the MTA plan blue to highlight overlaps with the other lists. Stations that are <em>unique</em> to either the largest degree or largest Katz centrality lists are colored purple.</p>
 <table>
 <thead><tr>
